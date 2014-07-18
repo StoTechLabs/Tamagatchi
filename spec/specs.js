@@ -37,11 +37,32 @@ describe("Tamagatchi", function() {
         var myPet = Object.create(Tamagatchi);
         myPet.initialize("Rover");
         myPet.foodlevel = 0;
-        console.log(myPet.foodlevel);
-        console.log(myPet.isDead());
-        console.log(myPet.isAlive());
+        //console.log(myPet.foodlevel);
+        //console.log(myPet.isDead());
+        //console.log(myPet.isAlive());
         myPet.isDead().should.equal(true);
       });
     });
+    describe("feedIt", function() {
+      it("It should increase the food level by 1", function() {
+        var myPet = Object.create(Tamagatchi);
+        myPet.initialize("Rover");
+        myPet.feedIt().should.equal(21);
+      })
+    })
+    describe("taketoBathroom", function() {
+      it("It should set the bathroom level to 0", function() {
+        var myPet = Object.create(Tamagatchi);
+        myPet.initialize("Rover");
+        myPet.taketoBathroom().should.equal(0);
+      })
+    })
+    describe("putToBed", function() {
+      it("Should set the sleep level to 20", function() {
+        var myPet = Object.create(Tamagatchi);
+        myPet.initialize("Rover");
+        myPet.putToBed().should.equal(20);
+      })
+    })
   });
 });

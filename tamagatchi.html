@@ -9,28 +9,31 @@
 </head>
 <body>
   <div class="container-fluid">
-    <h1 class="text-center">Triangle maker</h1>
-    <p class="text-center">We'll name triangles for you</p>
-    <p class="text-center">Throw some length below</p>
+    <h1 class="text-center">TAMAGATCHI</h1>
+    <p class="text-center"></p>
+    <p class="text-center"></p>
     <form class="form-horizontal" role="form">
       <div class="form-group">
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputSide1" placeholder="Side1">
-        </div>
+
       </div>
       <div class="form-group">
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputSide2" placeholder="Side2">
-        </div>
       </div>
-      <div class="col-xs-10">
-          <input type="text" class="form-control" id="inputSide3" placeholder="Side3">
-        </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-lg">Name</button>
+      <button type="button" class="btn btn-primary btn-lg" id="start">Start</button>
+      <br>
+      <button type="button" class="btn btn-primary btn-lg" id="feed-me">Feed Me</button>
+      <br>
+      <button type="button" class="btn btn-primary btn-lg" id="bedtime">Take me to Bed</button>
+      <br>
+      <button type="button" class="btn btn-primary btn-lg" id="bathroom">Bathroom Break</button>
     </form>
     <div class="container-fluid result">
-      <p class="text-center result"></p>
+      <table table align ="center" class="table">
+      <tr> <td>Food Levels   </td>
+       <td>Sleep Levels   </td>
+       <td>Bladder Levels</td></tr>
+          <tr><td id="food-level"></td><td id="sleep-level"></td><td id="bladder-level"></td></tr>
+      </table>
     </div>
   </div>
 </body>
